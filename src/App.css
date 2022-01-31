@@ -1,4 +1,6 @@
-.App {
+*{
+  font-family: Ubuntu  ; 
+}.App {
   text-align: center;
 }
 
