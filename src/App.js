@@ -1,6 +1,11 @@
+import { useSelector ,useDispatch} from 'react-redux';
 import './App.css';
+import {incNumber,decNumber} from './actions/index'
+
 
 function App() {
+const  myState = useSelector((state)=>state.changeNumber) 
+const dispatch = useDispatch()
   return (
     <div className="App">
       <header className="App-header">
@@ -8,7 +13,10 @@ function App() {
    <h1>React Redux Counter Application</h1>
    <h4> Faryad Azim </h4>
 
-<span> <a href="/"> - </a> <input style={{textAlign:'center'}} type="text" className="form-control" value="0" /> <a href="/"> + </a></span>
+<span> <button onClick={()=>{dispatch(incNumber())
+console.log('hello');}}> - </button>
+ <input style={{textAlign:'center'}} type="text" className="form-control" value={myState} /> 
+ <a href="/"> + </a></span>
  
  
   
